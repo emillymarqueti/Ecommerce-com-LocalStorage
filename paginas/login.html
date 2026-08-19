@@ -1,0 +1,85 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Acesso | Nutri+ Suplementos</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="logo">
+                <h1>Nutri<span>+</span></h1>
+                <p>Performance e Saúde de Verdade</p>
+            </div>
+            <div class="divIcones-header">
+                <a href="login.html" class="icone-header">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+                <a href="carrinho.html" class="icone-header">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+            </ul>
+        </nav>
+
+
+        <main class="container">
+            <div class="container-forms" id="Login" style="display: block;">
+                <h2>Login</h2>
+                <form id="form-login">
+                    <div class="div-form">
+                        <label>E-mail:</label>
+                        <input type="email" id="login-email" >
+                    </div>
+                    <div class="div-form">
+                        <label>Senha:</label>
+                        <input type="password" id="login-senha" >
+                    </div>
+                        <button type="button" class="button-acesso" onclick="logar()">Entrar</button>
+                        <p>Não possui uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
+                </form>
+            </div>
+
+            <div class="container-forms" id="Cadastro" style="display: none;">
+                <form id="form-cadastro">
+                    <div class="div-form">
+                        <h2>Criar Conta</h2>
+                    </div>
+                    <div class="div-form">
+                        <label>Nome Completo:</label>
+                        <input type="text" id="cad-nome" placeholder="Seu nome" >
+                        <span id="erro-nome" class="erro"></span> 
+                    </div>
+                    <div class="div-form">
+                        <label>E-mail:</label>
+                        <input type="email" id="cad-email" placeholder="email@exemplo.com" >
+                        <span id="erro-email" class="erro"></span>
+                    </div>
+                    <div class="div-form">
+                        <label>Senha:</label>
+                        <input type="password" id="cad-senha" placeholder="Crie uma senha" >
+                        <span id="erro-senha" class="erro"></span>
+                    </div>
+                    <div class="div-form">
+                        <button type="submit" class="button-acesso">Cadastrar</button>    
+                        <p>Já tem uma conta? <a href="#" onclick="mostrarLogin()">Faça login</a></p>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script src="../js/login.js"></script>
+    </body>
+    </html>
