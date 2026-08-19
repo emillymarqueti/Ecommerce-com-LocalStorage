@@ -1,0 +1,130 @@
+body{
+    background-color: #f5f3ff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header{
+    background-color: #491f72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h2{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header li{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+header button{
+    background-color: #a24fda;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover{
+    background-color: #b86bea;
+}
+
+main{
+    width: 90%;
+    margin: 30px auto;
+}
+
+h3{
+    color: #491f72;
+    text-align: center;
+}
+
+.form-produto,
+.produtos-localStorage,
+.form-funcionarios,
+.funcionarios-localStorage,
+.contatos-localStorage{
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+form{
+    width: 100%;
+}
+
+label{
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button, #button-limparTudo{
+    background-color: #a24fda;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button{
+    width: 100%;
+}
+
+
+.button:hover, #button-limparTudo:hover{
+    background-color: #491f72;
+}
+
+
+
+
+#lista-produtos-localStorage div,
+#lista-funcionarios-localStorage div,
+#lista-contatos-localStorage div{
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-top: 10px;
+    border-left: 4px solid #a24fda;
+}
+
+#lista-produtos-localStorage p,
+#lista-funcionarios-localStorage p,
+#lista-contatos-localStorage p{
+    margin: 5px 0;
+}
+
+#lista-produtos-localStorage button,
+#lista-funcionarios-localStorage button,
+#lista-contatos-localStorage button{
+    background-color: #d33;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
