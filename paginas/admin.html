@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Administrativo | Nutri+ Suplementos</title>
+    <link rel="stylesheet" href="../css/styleAdmin.css">
+</head>
+<body>
+
+    <header>
+        <h2>Área Administrativa</h2>
+        <ul>
+            <li><button onclick="mostrarProdutos()">Produtos</button></li>
+            <li><button onclick="mostrarFuncionarios()">Funcionários</button></li>
+            <li><button onclick="mostrarMensagens()">Mensagens</button></li>
+        </ul>
+    </header>
+
+    
+
+    <main>
+        
+        <div class="form-produto" style="display: none;">
+            <h3>Cadastrar Novo Produto</h3>
+            <form id="formAdmin-produtos">
+                <label for="nome-novo">Nome do Suplemento</label>
+                <input type="text" id="nome-novo" placeholder="Nome do Suplemento" >
+                <label for="preco-novo">Preço</label>
+                <input type="number" id="preco-novo" placeholder="Ex: 99.90" >
+                <label for="img-novo">Imagem</label>
+                <input type="text" id="img-novo" placeholder="Ex: whey.jpg">
+                <label for="categoria-novo">Categoria</label>
+                <select name="categoria-novo" id="categoria-novo">
+                    <option value="">Selecione a Categoria</option>
+                    <option value="Proteínas">Proteínas</option>
+                    <option value="Energia">Energia</option>
+                    <option value="Alimentação">Alimentação</option>
+                </select>
+                <label for="destaque-novo">Em destaque?</label>
+                <select name="destaque-novo" id="destaque-novo">
+                    <option value="">Selecione</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+                <label for="estoque-novo">Estoque</label>
+                <input type="number" id="estoque-novo" placeholder="Ex: 10" >
+                <button type="submit" class="button">Salvar Produtos</button>
+            </form>
+        </div>
+
+        <div class="produtos-localStorage" style="display: none;">
+            <h3>Produtos (LocalStorage)</h3>
+            <div id="lista-produtos-localStorage"></div>
+            <button id="button-limparTudo" onclick="limparTudo()">Limpar Todos Produtos do LocalStorage</button>
+        </div>
+
+        <div class="form-funcionarios" style="display: none;">
+            <h3>Cadastrar Funcionário</h3>
+            <form id="formAdmin-funcionarios">
+                <label for="nomeCompleto-func">Nome do Funcionário</label>
+                <input type="text" id="nomeCompleto-func" placeholder="Nome do Funcionário" >
+                <label for="dataNascimento-func">Data de Nascimento</label>
+                <input type="text" id="dataNascimento-func" placeholder="Data de Nascimento" >
+                <label for="email-func">Email</label>
+                <input type="email" id="email-func" placeholder="Email do Funcionário" required>
+                <label for="senha-func">Senha</label>
+                <input type="password" id="senha-func" placeholder="Senha do Funcionário" >
+                <label for="cargo-func">Cargo</label>
+                <input type="text" id="cargo-func" placeholder="Cargo do Funcionário" >
+                <button type="submit" class="button">Salvar Funcionário</button>
+            </form>
+        </div>
+
+
+        <div class="funcionarios-localStorage" style="display: none;">
+            <h3>Funcionários (LocalStorage)</h3>
+            <div id="lista-funcionarios-localStorage"></div>
+            <button id="button-limparTudo" onclick="limparTudoFuncionarios()">Limpar Todos Funcionários do LocalStorage</button>
+        </div>
+
+        <div class="contatos-localStorage" style="display: none;">
+            <h3>Contatos (LocalStorage)</h3>
+            <div id="lista-contatos-localStorage"></div>
+            <button id="button-limparTudo" onclick="limparTudoContatos()">Limpar Todos Mensagens do LocalStorage</button>
+        </div>
+
+    </main>
+
+    <script src="../js/admin.js"></script>
+    <script>
+        function mostrarProdutos() {
+            document.querySelector('.form-produto').style.display = 'block';
+            document.querySelector('.produtos-localStorage').style.display = 'block';
+            document.querySelector('.form-funcionarios').style.display = 'none';
+            document.querySelector('.funcionarios-localStorage').style.display = 'none';
+            document.querySelector('.contatos-localStorage').style.display = 'none';
+        }
+
+        function mostrarFuncionarios() {
+            document.querySelector('.form-produto').style.display = 'none';
+            document.querySelector('.produtos-localStorage').style.display = 'none';
+            document.querySelector('.form-funcionarios').style.display = 'block';
+            document.querySelector('.funcionarios-localStorage').style.display = 'block';
+            document.querySelector('.contatos-localStorage').style.display = 'none';
+        }
+
+        function mostrarMensagens() {
+            document.querySelector('.form-produto').style.display = 'none';
+            document.querySelector('.produtos-localStorage').style.display = 'none';
+            document.querySelector('.form-funcionarios').style.display = 'none';
+            document.querySelector('.funcionarios-localStorage').style.display = 'none';
+            document.querySelector('.contatos-localStorage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
